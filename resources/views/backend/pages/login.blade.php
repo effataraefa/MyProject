@@ -1,108 +1,78 @@
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
+<!doctype html>
+<html lang="en">
 
-<style>
-    body {
-        font-family: "Lato", sans-serif;
-    }
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="{{ '/backend/login/fonts/icomoon/style.css' }}">
 
+    <link rel="stylesheet" href="{{ '/backend/login/css/owl.carousel.min.css' }}">
 
-    .main-head {
-        height: 150px;
-        background: #FFF;
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ '/backend/login/css/bootstrap.min.css' }}">
 
-    }
+    <!-- Style -->
+    <link rel="stylesheet" href="{{ '/backend/login/css/style.css' }}">
 
-    .sidenav {
-        height: 100%;
-        background-color: #000;
-        overflow-x: hidden;
-        padding-top: 20px;
-    }
+    <title>Login #7</title>
+</head>
 
-
-    .main {
-        padding: 0px 10px;
-    }
-
-    @media screen and (max-height: 450px) {
-        .sidenav {
-            padding-top: 15px;
-        }
-    }
-
-    @media screen and (max-width: 450px) {
-        .login-form {
-            margin-top: 10%;
-        }
-
-        .register-form {
-            margin-top: 10%;
-        }
-    }
-
-    @media screen and (min-width: 768px) {
-        .main {
-            margin-left: 40%;
-        }
-
-        .sidenav {
-            width: 40%;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-        }
-
-        .login-form {
-            margin-top: 80%;
-        }
-
-        .register-form {
-            margin-top: 20%;
-        }
-    }
+<body>
 
 
-    .login-main-text {
-        margin-top: 20%;
-        padding: 60px;
-        color: #fff;
-    }
 
-    .login-main-text h2 {
-        font-weight: 300;
-    }
-
-    .btn-black {
-        background-color: #000 !important;
-        color: #fff;
-    }
-</style>
-<div class="sidenav">
-    <div class="login-main-text">
-        <h2>Application<br> Login Page</h2>
-        <p>Login or register from here to access.</p>
-    </div>
-</div>
-<div class="main">
-    <div class="col-md-6 col-sm-12">
-        <div class="login-form">
-            <form>
-                <div class="form-group">
-                    <label>User Name</label>
-                    <input type="text" class="form-control" placeholder="User Name">
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="{{ '/backend/login/images/undraw_remotely_2j6y.svg' }}" alt="Image" class="img-fluid">
                 </div>
-                <div class="form-group">
-                    <label>Password</label>
-                    <input type="password" class="form-control" placeholder="Password">
+                <div class="col-md-6 contents">
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <div class="mb-4">
+                                <h3>Sign In</h3>
+                                <p class="mb-4">Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur
+                                    adipisicing.</p>
+                            </div>
+                            <form action="{{ route('do.login') }}" method="post">
+                                @csrf
+                                <div class="form-group first">
+                                    <label for="email">Email</label>
+                                    <input type="email" name="email" class="form-control" id="Email">
+
+                                </div>
+                                <div class="form-group last mb-4">
+                                    <label for="password">Password</label>
+                                    <input type="password" name="password" class="form-control" id="password">
+
+                                </div>
+
+                                <div class="d-flex mb-5 align-items-center">
+
+
+                                </div>
+
+                                <input type="submit" value="Log In" class="btn btn-block btn-primary">
+
+                            </form>
+                        </div>
+                    </div>
+
                 </div>
-                <button type="submit" class="btn btn-black">Login</button>
-                <button type="submit" class="btn btn-secondary">Register</button>
-            </form>
+
+            </div>
         </div>
     </div>
-</div>
+
+
+    <script src="{{ '/backend/login/js/jquery-3.3.1.min.js' }}"></script>
+    <script src="{{ '/backend/login/js/popper.min.js' }}"></script>
+    <script src="{{ '/backend/login/js/bootstrap.min.js' }}"></script>
+    <script src="{{ '/backend/login/js/main.js' }}"></script>
+</body>
+
+</html>
